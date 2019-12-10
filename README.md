@@ -70,6 +70,8 @@ Conjunto de software total creado:
 - 13 scripts en python para el procesamiento del .csv y la obtención de gráficos
 - 1 script en python calculador de riesgo
 - 13 imágenes .png de gráficos representativos de las conclusiones obtenidas
+![Gráficos ejemplo](/master/images/graficosEjemplo.PNG)
+![Scripts](/master/images/scripts.PNG)
 
 Todo el proceso, tanto la creación del software como la ejecucción de scripts, lo hemos realizado en ubuntu de manera local en nuestros ordenadores personales.
 Para la edición de los scripts usamos *Sublime Text*. Su ejecución la hemos realizado mediante el terminal de Ubuntu *Bash* con el soporte de *Pyspark*. Para su correcto funcionamiento el archivo del dataset (MadridAccidents.csv) se debería situar en el mismo directorio que el script de analisis que se desee ejecutar. Tras la ejecución se obtendrá por output en el terminal un resumen del analisis realizado y una imagen .png con el gráfico correspondiente.
