@@ -1,6 +1,6 @@
 # Proyecto Cloud
 ## Índice
-**1. El Proyecto**
+1. **El Proyecto**
    - Descripción del problema
    - Necesidad de Big Data
    - Solución
