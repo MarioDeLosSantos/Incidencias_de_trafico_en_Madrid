@@ -13,6 +13,26 @@
 6. **Conclusión**
 
 ### 1. **El proyecto**
-    ### **Descripción del problema**
-    El objetivo de este proyecto es tratar de disminuir el número de accidentes en cualquier área metropolitana mediante un estudio de incidencias en el tráfico. En concreto hemos llevado a cabo el estudio en la ciudad de Madrid analizando registros de accidentes
-    de tráfico desde 2010.
+### 1.1 Descripción del problema
+    El objetivo de este proyecto es tratar de disminuir el número de accidentes en cualquier área metropolitana mediante un estudio de incidencias en el tráfico. En concreto hemos llevado a cabo el estudio en la ciudad de Madrid analizando registros de accidentes de tráfico desde 2010.
+
+### 1.2 Necesidad de Big Data
+    La cantidad de datos y el número de operaciones necesarias a fin de obtener estadísticas reseñables puede llegar a ser masiva, por lo que se necesita una gran potencia de cómputo. Por otra parte, el estudio puede llegar a realizarse en tiempo real, por lo que también conlleva la necesidad implícita de uso de técnicas Big Data. No obstante, con el dataset usado en este prototipo no se ha requerido una gran potencia de cómputo ni la necesidad de una paralelización reseñable.
+
+### 1.3 Solución
+    Para buscar solución al problema planteado hemos usado principalmente dos métodos:
+
+    - Estudio de los registros:
+
+        El principal objetivo de este proyecto ha sido el estudio analítico de los registros de accidentes usados como dataset. Mediante    técnicas de *data analysis* y estadística hemos sacado una gran cantidad de información de gran relevancia para la toma de medidas adecuadas en el ámbito de la accidentalidad en el tráfico de Madrid.
+
+        En un primer momento hemos limpiado y unido los distintos archivos obtenidos del ayuntamiento de Madrid en un solo archivo .csv
+        sobre el que posteriormente trabajaríamos.
+        En segundo lugar hemos desarrollado distintos scripts en python que hemos corrido sobre el archivo .csv. Estos tenían como objetivo sacar datos estadísticos sobre los accidentes, desde la relación de accidentes dependiendo del sexo de los implicados a la cantidad de accidentes en los distintos distritos de la ciudad.
+        Por último y con el soporte de la librería **matplotlib** para facilitar la lectura y el manejo de los datos obtenidos hemos realizado diversos gráficos de apoyo.
+
+    - Programa calculador de riesgo:
+
+        El segundo objetivo del proyecto ha sido la creación de un pequeño programa en python que calcule el riesgo de realizar un determinado recorrido a partir de una determinado input. (Mas información en **5. Implementación avanzada**)
+        
+
