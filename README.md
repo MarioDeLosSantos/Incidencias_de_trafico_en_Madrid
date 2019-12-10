@@ -22,17 +22,38 @@ La cantidad de datos y el número de operaciones necesarias a fin de obtener est
 ### 1.3 Solución
 Para buscar solución al problema planteado hemos usado principalmente dos métodos:
 
-    - Estudio de los registros:
+- Estudio de los registros:
 
-        El principal objetivo de este proyecto ha sido el estudio analítico de los registros de accidentes usados como dataset. Mediante    técnicas de *data analysis* y estadística hemos sacado una gran cantidad de información de gran relevancia para la toma de medidas adecuadas en el ámbito de la accidentalidad en el tráfico de Madrid.
+El principal objetivo de este proyecto ha sido el estudio analítico de los registros de accidentes usados como dataset. Mediante    técnicas de *data analysis* y estadística hemos sacado una gran cantidad de información de gran relevancia para la toma de medidas adecuadas en el ámbito de la accidentalidad en el tráfico de Madrid.
 
-        En un primer momento hemos limpiado y unido los distintos archivos obtenidos del ayuntamiento de Madrid en un solo archivo .csv
-        sobre el que posteriormente trabajaríamos.
-        En segundo lugar hemos desarrollado distintos scripts en python que hemos corrido sobre el archivo .csv. Estos tenían como objetivo sacar datos estadísticos sobre los accidentes, desde la relación de accidentes dependiendo del sexo de los implicados a la cantidad de accidentes en los distintos distritos de la ciudad.
-        Por último y con el soporte de la librería **matplotlib** para facilitar la lectura y el manejo de los datos obtenidos hemos realizado diversos gráficos de apoyo.
+En un primer momento hemos limpiado y unido los distintos archivos obtenidos del ayuntamiento de Madrid en un solo archivo .csv
+sobre el que posteriormente trabajaríamos.
+En segundo lugar hemos desarrollado distintos scripts en python que hemos corrido sobre el archivo .csv. Estos tenían como objetivo sacar datos estadísticos sobre los accidentes, desde la relación de accidentes dependiendo del sexo de los implicados a la cantidad de accidentes en los distintos distritos de la ciudad.
+Por último y con el soporte de la librería **matplotlib** para facilitar la lectura y el manejo de los datos obtenidos hemos realizado diversos gráficos de apoyo.
 
-    - Programa calculador de riesgo:
+- Programa calculador de riesgo:
 
-        El segundo objetivo del proyecto ha sido la creación de un pequeño programa en python que calcule el riesgo de realizar un determinado recorrido a partir de una determinado input. (Mas información en **5. Implementación avanzada**)
+El segundo objetivo del proyecto ha sido la creación de un pequeño programa en python que calcule el riesgo de realizar un determinado recorrido a partir de una determinado input. (Mas información en **5. Implementación avanzada**)
         
 
+### 2. **Modelo de datos**
+
+Los datos han sido recopilados del Portal de Datos Abiertos del Ayuntamiento de Madrid. Para hacer este estudio nos hemos basado en los accidentes de tráfico en la Ciudad de Madrid registrados por la Policía Municipal, los cuales se hacen cuando hay víctimas o daños al patrimonio. En los datos manejados se incluye un registro por persona implicada en el accidente, y las especificaciones manejadas son:
+
+- Fecha en formato dd/mm/aaaa.
+- Rango horario: la hora se establece en intervalos de 1 hora.
+- Dia de la Semana: de lunes a domingo.
+- Distrito por nombre.
+- Lugar del accidente: calle o cruce de calles.
+- Número de la calle.
+- Número del parte de accidente.
+- Condiciones ambientales: granizo, hielo, lluvia, niebla, seco o nieve.
+- Estado de la vía: mojada, aceite, barro, grava suelta, hielo o seca y limpia.
+- Tipo de accidente: colisión doble, colisión múltiple, choque con objeto fijo, atropello, vuelco, caída de motocicleta, caída ciclomotor, caída de bicicleta, caída de viajero en un bus.
+- Tipo de vehículo.
+- Tipo de persona: conductor, peatón, testigo o viajero.
+- Sexo: hombre, mujer o no especificado.
+- Lesividad: Herido leve, herido grave o muerto.
+- Tramo de edad de la persona implicada.
+
+Disponemos de 1 dataset que cubre todos los años desde el 2010 hasta 2018(a excepción de 2011), con aproximadamente 226.000 líneas de registros.
