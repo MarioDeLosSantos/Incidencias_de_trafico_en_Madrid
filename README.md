@@ -1,4 +1,5 @@
 # Proyecto Cloud
+
 ## Índice
 1. **El Proyecto**
    - Descripción del problema
@@ -11,6 +12,7 @@
    - Gráficos de matplotlib
    - Machine learning
 6. **Conclusión**
+
 
 ### 1. **El proyecto**
 ### 1.1 Descripción del problema
@@ -38,6 +40,8 @@ El segundo objetivo del proyecto ha sido la creación de un pequeño programa en
 
 ### 2. **Modelo de datos**
 
+![Datos Ayuntamiento](/images/datosAyuntamiento.png)
+
 Los datos han sido recopilados del Portal de Datos Abiertos del Ayuntamiento de Madrid. Para hacer este estudio nos hemos basado en los accidentes de tráfico en la Ciudad de Madrid registrados por la Policía Municipal, los cuales se hacen cuando hay víctimas o daños al patrimonio. En los datos manejados se incluye un registro por persona implicada en el accidente, y las especificaciones manejadas son:
 
 - Fecha en formato dd/mm/aaaa.
@@ -57,3 +61,15 @@ Los datos han sido recopilados del Portal de Datos Abiertos del Ayuntamiento de 
 - Tramo de edad de la persona implicada.
 
 Disponemos de 1 dataset que cubre todos los años desde el 2010 hasta 2018(a excepción de 2011), con aproximadamente 226.000 líneas de registros.
+
+### 3. **Descripción técnica**
+
+Conjunto de software total creado:
+- 1 archivo .csv dedicado a los scripts de data analysis
+- 1 archivo .csv dedicado al script de calculo de riesgo
+- 13 scripts en python para el procesamiento del .csv y la obtención de gráficos
+- 1 script en python calculador de riesgo
+- 13 imágenes .png de gráficos representativos de las conclusiones obtenidas
+
+Todo el proceso, tanto la creación del software como la ejecucción de scripts, lo hemos realizado en ubuntu de manera local en nuestros ordenadores personales.
+Para la edición de los scripts usamos *Sublime Text*. Su ejecución la hemos realizado mediante el terminal de Ubuntu *Bash* con el soporte de *Pyspark*. Para su correcto funcionamiento el archivo del dataset (MadridAccidents.csv) se debería situar en el mismo directorio que el script de analisis que se desee ejecutar. Tras la ejecución se obtendrá por output en el terminal un resumen del analisis realizado y una imagen .png con el gráfico correspondiente.
