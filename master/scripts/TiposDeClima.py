@@ -24,37 +24,29 @@ from pyspark.sql.functions import rank,sum,col
 from pyspark.sql import Window
 
 #Configuracion de Spark, usando todos los cores disponibles
-conf=SparkConf().setMaster('local[*]').setAppName('tipoDeColision')
+conf=SparkConf().setMaster('local[*]').setAppName('rangoHorario')
 sc=SparkContext(conf=conf)
 sqlContext = SQLContext(sc)
 
 #Cargamos y guardamos el CSV
 table = sqlContext.read.format("csv").option("header","true").option("Inferschema","true").load("MadridAccidents.csv")
-
-#Eliminamos los accidentes duplicados quitando aquellos que tengan la misma fecha, mismo rango horario y mismo lugar
-table=table.dropDuplicates(["FECHA","RANGO HORARIO"])
-table=table.dropDuplicates(["LUGAR ACCIDENTE"])
 	
-#Ordenamos y sacamos el porcentaje de los accidentes totales
-table=table.groupby("TIPO ACCIDENTE").count().withColumn("%",col("count")*100/(table.select("TIPO ACCIDENTE").count()))
+#Ordenamos y sacamos el numero de accidentes por cada tipo de clima
+granizo=table.groupby("CPFA Granizo").count().select('count').collect()[1]['count']
+niebla=table.groupby("CPFA Niebla").count().select('count').collect()[1]['count']
+lluvia=table.groupby("CPFA Lluvia").count().select('count').collect()[1]['count']
+hielo=table.groupby("CPFA Hielo").count().select('count').collect()[1]['count']
 
-#DIBUJAR LA GRAFICA
+#Dibujamos y guardamos la grafica
 
-tipos=table.select('TIPO ACCIDENTE').collect()
-valores=table.select('%').collect()
+labels ='Tiempo favorable','Tiempo no favorable'
+sizes = [table.select("RANGO HORARIO").count(),granizo+niebla+lluvia+hielo]
 
-labels = [tipos[0]['TIPO ACCIDENTE'], tipos[1]['TIPO ACCIDENTE'], tipos[2]['TIPO ACCIDENTE'], tipos[3]['TIPO ACCIDENTE'],tipos[4]['TIPO ACCIDENTE'],tipos[5]['TIPO ACCIDENTE'],
-tipos[6]['TIPO ACCIDENTE'],tipos[7]['TIPO ACCIDENTE'],tipos[8]['TIPO ACCIDENTE'],tipos[9]['TIPO ACCIDENTE']]
-sizes = [valores[0]['%'], valores[1]['%'], valores[2]['%'], valores[3]['%'],valores[4]['%'],valores[5]['%'],valores[6]['%'],valores[7]['%'],valores[8]['%'],
-valores[9]['%']]
-
-plt.figure(figsize=(800/96, 500/96), dpi=96)
-
-colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral','blueviolet','red','blue','green','yellow']
+colors = ['blue', 'red']
 patches, texts = plt.pie(sizes,colors=colors, shadow=True, startangle=90)
 
 
 plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 plt.legend(patches, labels, loc="best")
-plt.tight_layout()	
-plt.savefig('tipoDeColision.png',dpi=96)
+plt.tight_layout()
+plt.savefig('TiposDeClima.png')
