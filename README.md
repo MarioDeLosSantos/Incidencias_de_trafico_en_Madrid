@@ -1,6 +1,6 @@
-## ProyectoCloud
-# Índice
-1. El Proyecto
+# Proyecto Cloud
+## Índice
+**1. El Proyecto**
    - Descripción del problema
    - Necesidad de Big Data
    - Solución
@@ -11,4 +11,3 @@
    - Gráficos de matplotlib
    - Machine learning
 6. Conclusión
-
