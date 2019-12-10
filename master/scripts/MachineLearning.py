@@ -1,3 +1,20 @@
+# Copyright 2019
+# Authors: Mario de los Santos, Jesús Ramos, Marcos Docampo Prieto-Puga
+# All Rights Reserved.
+#
+#    Licensed under the Apache License, Version 2.0 (the "License"); you may
+#    not use this file except in compliance with the License. You may obtain
+#    a copy of the License at
+#
+#         http://www.apache.org/licenses/LICENSE-2.0
+#
+#    Unless required by applicable law or agreed to in writing, software
+#    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+#    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+#    License for the specific language governing permissions and limitations
+#    under the License.
+
+
 #Para la creacion y manejo de arrays en el proceso de la ejecucion
 import numpy as np
 #Para recoger los datos del csv que vamos a procesar
@@ -86,9 +103,14 @@ def main():
     XwithOnes=np.hstack((np.ones(shape=(X_norm.shape[0],1)),X_norm))
 
     # #Sacamos el ThetaOptimo que hara minimo la funcion de coste
+	
+	#IMPORTANTE:
+	#EN CASO DE CAMBIAR EL DATASET A PROCESAR,DESCOMENTAR LA LINEA DE ABAJO PARA CALCULAR EL NUEVO THETAOPTIMO 
+	#CON EL QUE ADIVINAREMOS NUEVOS VALORES
     # gradiente_=descensoGradiente(XwithOnes,Y,0.0001)
-    # print(gradiente_)
 
+	#IMPORTANTE:
+	#PONEMOS DIRECTAMENTE EL THETA OPTIMO HAYADO PARA NO CALCULARLO EN CADA EJECUCION
     ThetaOptimo=np.array([ 8.22286797e-07 ,-4.72866099e-08 ,-4.46854796e-08 , 2.04102162e-07 ,-5.48385083e-08])
 
     #Una vez tenemos el thetaMinimo,predecimos un nuevo dato, normalizandolos primero
@@ -100,7 +122,6 @@ def main():
     x3=(int(NuevoDato[3])-mu[3])/sigma[3]
 
     prediccionDG=np.dot(np.array([1,x0,x1,x2,x3]),ThetaOptimo.T)
-    print(prediccionDG)
 
     #Una vez tenemos el porcentaje del nuevo caso calculado, veremos 
     #su peligrosidad relativa respecto a la media de accidentes segun
