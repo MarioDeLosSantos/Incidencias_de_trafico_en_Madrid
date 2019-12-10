@@ -40,7 +40,7 @@ El segundo objetivo del proyecto ha sido la creación de un pequeño programa en
 
 ### 2. **Modelo de datos**
 
-![Datos Ayuntamiento](/images/datosAyuntamiento.png)
+![Datos Ayuntamiento](/master/images/datosAyuntamiento.PNG)
 
 Los datos han sido recopilados del Portal de Datos Abiertos del Ayuntamiento de Madrid. Para hacer este estudio nos hemos basado en los accidentes de tráfico en la Ciudad de Madrid registrados por la Policía Municipal, los cuales se hacen cuando hay víctimas o daños al patrimonio. En los datos manejados se incluye un registro por persona implicada en el accidente, y las especificaciones manejadas son:
 
