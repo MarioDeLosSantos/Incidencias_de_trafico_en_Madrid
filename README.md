@@ -18,10 +18,10 @@
 
 ### 1. **El proyecto**
 #### 1.1 Descripción del problema
-El objetivo de este proyecto es tratar de disminuir el número de accidentes en cualquier área metropolitana mediante un estudio de incidencias en el tráfico. En concreto hemos llevado a cabo el estudio en la ciudad de Madrid analizando registros de accidentes de tráfico desde 2010.
+El objetivo de este proyecto es tratar de disminuir el número de accidentes en cualquier área metropolitana mediante un estudio de incidencias en el tráfico. En concreto hemos llevado a cabo el estudio en la ciudad de Madrid analizando registros de accidentes de tráfico entre los años 2010-2018.
 
 #### 1.2 Necesidad de Big Data
-La cantidad de datos y el número de operaciones necesarias a fin de obtener estadísticas reseñables puede llegar a ser masiva, por lo que se necesita una gran potencia de cómputo. Por otra parte, el estudio puede llegar a realizarse en tiempo real, por lo que también conlleva la necesidad implícita de uso de técnicas Big Data. No obstante, con el dataset usado en este prototipo no se ha requerido una gran potencia de cómputo ni la necesidad de una paralelización reseñable.
+La cantidad de datos y el número de operaciones necesarias a fin de obtener estadísticas reseñables puede llegar a ser masiva, por lo que se necesita una gran potencia de cómputo. Por otra parte, el estudio puede llegar a realizarse en tiempo real, por lo que también conlleva la necesidad implícita de uso de técnicas Big Data. No obstante, con el dataset usado en este prototipo no se ha requerido una gran potencia de cómputo ni la necesidad del uso de la paralelización.
 
 #### 1.3 Solución
 Para buscar solución al problema planteado hemos usado principalmente dos métodos:
