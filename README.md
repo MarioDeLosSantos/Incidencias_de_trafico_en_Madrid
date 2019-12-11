@@ -93,5 +93,7 @@ Dentro de este apartado analizaremos los aspectos mas técnicos del proyecto
 
 #### 5.1 **Implementación de los gráficos con Matplotlib**
 Dentro de todas los tipos de gráficas posibles hemos escogido las vistas anteriormente por un motivo en concreto, y es que algunas probabilidades son tan bajas que ponerlas en la gráfica quedan mal, por ello unicamente hemos optado por poner los tamaños relativos al total como una leyenda para identificar cada una de las probabilidades.
-Las formas de asignar el tamaño a cada etiqueta viene dado por el siguiente codigo
+Las formas de asignar el tamaño a cada etiqueta viene dado de una forma similar al siguiente codigo
+![Ejemplo Codigo](/master/images/ejemploPintado.jpg)
+
 
