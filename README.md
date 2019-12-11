@@ -120,5 +120,5 @@ Aquí vemos unos cuantos ejemplos del uso de este script el cual imprime la prob
 
 ![Ejemplo Ejecucion](/master/images/EjemploEjecucion.png)
 
-Es importante hacer saber que el dia donde se producen mas accidentes es el Domingo, el tipo de coche con el que se producen mas accidentes es el turismo, el tipo de persona mas implicada es el condcutor y unos de los distritos donde se producen mas accidentes es en Salamanca. Siguiendo este esquema vemos que las probabilidades que nos imprime el programa concuerdan perfectamente.
+Es importante hacer saber que el dia donde se producen mas accidentes es el miercoles y el que menos el domingo, el tipo de coche con el que se producen mas accidentes es el turismo, el tipo de persona mas implicada es el condcutor y uno de los que menos es el peaton, y unos de los distritos donde se producen mas accidentes es en Salamanca. Siguiendo este esquema vemos que las probabilidades que nos imprime el programa concuerdan perfectamente.
 
