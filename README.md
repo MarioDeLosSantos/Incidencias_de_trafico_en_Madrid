@@ -37,7 +37,7 @@ Por último y con el soporte de la librería **matplotlib** para facilitar la le
 
 - Programa calculador de riesgo:
 
-El segundo objetivo del proyecto ha sido la creación de un pequeño programa en python que calcule el riesgo de realizar un determinado recorrido a partir de una determinado input. (Mas información en **5.2 Implementacion del Machine Learning**)
+El segundo objetivo del proyecto ha sido la creación de un pequeño programa en python que calcule el riesgo de realizar un determinado recorrido a partir de un determinado input. (Mas información en **5.2 Implementacion del Machine Learning**)
         
 
 ### 2. **Modelo de datos**
@@ -103,7 +103,8 @@ La idea de la parte del uso de Machine Learning en el proyecto es la predicción
 - DIA SEMANA->Dia en el que procederemos al viaje.
 - Tipo Vehiculo->Tipo de vehículo que usaremos en el viaje.
 - TIPO PERSONA->Tipo de persona implicada en el accidente,puede ser (Conductor,Peaton,Testigo o Viajero).
-Debido a que nuestro objetivo es predecir una nueva probabilidad (Y de la funcion) para un nuevo caso (X de la funcion), optaremos por usar regresión linea no regularizada.
+
+Debido a que nuestro objetivo es predecir una nueva probabilidad (Y de la funcion) para un nuevo caso (X de la funcion), optaremos por usar regresión lineal no regularizada.
 Primero implementaremos tanto la función de coste como la función del gradiente.Debido al tamaño de nuestros datos no podremos usar funciones externas para obtener el theta óptimo al instante, por lo que tendremos que implementarnos el descenso de gradiente a mano.
 Este proceso puede llegar a ser muy costoso tanto en tiempo como en potencia de computo (dependiendo la precision que queramos obtener) .En este caso en concreto estuvimos aplicando el descenso de gradiente durante aproximadamente 95 minutos en un ordenador local,y se tendrá que repetir este proceso cada vez que el dataset a procesar haya sido modificado, por lo que está claro que tiene una necesidad inmensa del uso de paralelización.
 
