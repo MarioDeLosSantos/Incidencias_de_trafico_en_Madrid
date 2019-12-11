@@ -99,7 +99,7 @@ Las formas de asignar el tamaño a cada etiqueta viene dado de una forma similar
 
 #### 5.2 **Implementación del Machine Learning**
 La idea de la parte del uso de Machine Learning en el proyecto es la predicción de la probabilidad de tener un accidente dado un nuevo caso que no se encuentre en nuestro dataset.El dataset consta con muchas columnas informativas pero hemos decidido centrarnos en aquellas que creemos que son las mas relevantes que son las siguientes:
-- DISTRITO->Distrito de Madrid al que queremos dirigirnos
+- DISTRITO->Distrito de Madrid al que queremos dirigirnos.
 - DIA SEMANA->Dia en el que procederemos al viaje
 - Tipo Vehiculo->Tipo de vehículo que usaremos en el viaje
 - TIPO PERSONA->Tipo de persona implicada en el accidente,puede ser (Conductor,Peaton,Testigo o Viajero)
