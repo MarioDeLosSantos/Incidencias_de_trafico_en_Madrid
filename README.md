@@ -116,5 +116,7 @@ Una vez calculado el theta óptimo, calcular nuevas probabilidades es un proceso
 - np.dot(X,ThetaOptimo.T) , siendo X los 4 nuevos datos que queramos someter a la regresión linea.
 El resultado de esta operación sera la probabilidad de tener un accidente con las caracteristicas expresadas en la nueva X.
 
-Aquí vemos unos cuantos ejemplos del uso de este script el cual imprime la probabilidad de tener un accidente relativa a la media de las probabilidades de tener un accidente con las 4 columnas escogidas anteriormente como características
+Aquí vemos unos cuantos ejemplos del uso de este script el cual imprime la probabilidad de tener un accidente relativa a la media de las probabilidades de tener un accidente con las 4 columnas escogidas anteriormente como características.
+
+![Ejemplo Ejecucion](/master/images/EjemploEjecucion.jpg)
 
