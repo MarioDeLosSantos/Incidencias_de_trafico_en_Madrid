@@ -12,7 +12,7 @@
    - Desarrollo del Machine Learning
 5. **Implementación avanzada**
    - Implementacion de los gráficos con Matplotlib
-   - Implementacion de Machine learning
+   - Implementacion del Machine learning
 6. **Conclusión**
 
 
@@ -37,7 +37,7 @@ Por último y con el soporte de la librería **matplotlib** para facilitar la le
 
 - Programa calculador de riesgo:
 
-El segundo objetivo del proyecto ha sido la creación de un pequeño programa en python que calcule el riesgo de realizar un determinado recorrido a partir de una determinado input. (Mas información en **5.2 Implementacion de Machine Learning**)
+El segundo objetivo del proyecto ha sido la creación de un pequeño programa en python que calcule el riesgo de realizar un determinado recorrido a partir de una determinado input. (Mas información en **5.2 Implementacion del Machine Learning**)
         
 
 ### 2. **Modelo de datos**
@@ -86,14 +86,20 @@ Dado que el coste de crear los gráficos después de procesar los datos es casi 
 El rendimiento en el data-processing para la creacion de los gráficos es equivalente a los cores que se le adjunte al proceso, por tanto la escabilidad es realmente alta.Éstos gráficos lo hemos creado localmente en nuestros dispositivos usando todos los cores disponibles en éstos, pero hemos hecho pruebas en Clusters de Amazon paralelizando el proceso haciendo que el tiempo de espera hasta adquirir el resultado se acorte notablemente.
 
 #### 4.2 **Desarrollo del Machine Learning**
-El desarrollo del Machine Learning ha sido principalmente implementado localmente por un motivo en particular y es que el único cuello de botella aparece cuando se modifica los datos fuente a procesar, lo que hace que cualquier ordenador de propósito general sea suficiente para el proceso.Por tanto la escalabilidad en unicamente necesaria cuando se cambie los datos a procesar , en caso contrario no es necesario. (Ver el porque en el apartado (Mas información en **5.2 Implementación de Machine Learning**)
+El desarrollo del Machine Learning ha sido principalmente implementado localmente por un motivo en particular y es que el único cuello de botella aparece cuando se modifica los datos fuente a procesar, lo que hace que cualquier ordenador de propósito general sea suficiente para el proceso.Por tanto la escalabilidad en unicamente necesaria cuando se cambie los datos a procesar , en caso contrario no es necesario. (Ver el porque en el apartado (Mas información en **5.2 Implementación del Machine Learning**)
 
 ### 5. **Implementación avanzada**
 Dentro de este apartado analizaremos los aspectos mas técnicos del proyecto
 
 #### 5.1 **Implementación de los gráficos con Matplotlib**
-Dentro de todas los tipos de gráficas posibles hemos escogido las vistas anteriormente por un motivo en concreto, y es que algunas probabilidades son tan bajas que ponerlas en la gráfica quedan mal, por ello unicamente hemos optado por poner los tamaños relativos al total como una leyenda para identificar cada una de las probabilidades.
-Las formas de asignar el tamaño a cada etiqueta viene dado de una forma similar al siguiente codigo
+Dentro de todas los tipos de gráficas posibles hemos escogido las vistas anteriormente por un motivo en concreto, y es que algunas probabilidades son tan bajas que ponerlas en la gráfica quedan mal, por ello unicamente hemos optado por poner los tamaños relativos al total así como una leyenda para identificar cada una de las probabilidades.
+Las formas de asignar el tamaño a cada etiqueta viene dado de una forma similar al siguiente codigo:
+
 ![Ejemplo Codigo](/master/images/ejemploPintado.jpg)
 
-
+#### 5.2 **Implementación del Machine Learning**
+La idea de la parte del uso de Machine Learning en el proyecto es la predicción de la probabilidad de tener un accidente dado un nuevo caso que no se encuentre en nuestro dataset.El dataset consta con muchas columnas informativas pero hemos decidido centrarnos en aquellas que creemos que son las mas relevantes que son las siguientes:
+- DISTRITO->Distrito de Madrid al que queremos dirigirnos
+- DIA SEMANA->Dia en el que procederemos al viaje
+- Tipo Vehiculo->Tipo de vehículo que usaremos en el viaje
+- TIPO PERSONA->Tipo de persona implicada en el accidente,puede ser (Conductor,Peaton,Testigo o Viajero)
