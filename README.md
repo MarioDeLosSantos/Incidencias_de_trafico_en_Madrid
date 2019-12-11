@@ -8,6 +8,8 @@
 2. **Modelo de datos**
 3. **Descripción técnica**
 4. **Rendimiento**
+   -Gráficos con matplotlib en PySpark
+   -Desarrollo del Machine Learning
 5. **Implementación avanzada**
    - Gráficos de matplotlib
    - Machine learning
@@ -74,4 +76,14 @@ Conjunto de software total creado:
 ![Scripts](/master/images/scripts.PNG)
 
 Todo el proceso, tanto la creación del software como la ejecucción de scripts, lo hemos realizado en ubuntu de manera local en nuestros ordenadores personales.
-Para la edición de los scripts usamos *Sublime Text*. Su ejecución la hemos realizado mediante el terminal de Ubuntu *Bash* con el soporte de *Pyspark*. Para su correcto funcionamiento el archivo del dataset (MadridAccidents.csv) se debería situar en el mismo directorio que el script de analisis que se desee ejecutar. Para ejecutar el script unicamente habra que poner "spark-submit (nombre del script).Tras la ejecución se obtendrá por output en el terminal un resumen del analisis realizado y una imagen .png con el gráfico correspondiente que se guardará en el mismo directorio desde donde se ejecuto el script.
+Para la edición de los scripts usamos *Sublime Text*. Su ejecución la hemos realizado mediante el terminal de Ubuntu *Bash* con el soporte de *Pyspark*. Para su correcto funcionamiento el archivo del dataset (MadridAccidents.csv) se debería situar en el mismo directorio que el script de analisis que se desee ejecutar. Para ejecutar el script unicamente habra que poner "spark-submit (nombre del script)".Tras la ejecución se obtendrá por output en el terminal un resumen del analisis realizado y una imagen .png con el gráfico correspondiente que se guardará en el mismo directorio desde donde se ejecuto el script.
+
+### 4. **Rendimiento**
+Dentro de este apartado analizaremos el rendimiento de las dos caras de nuestro proyecto, tanto el data-processing con pyspark como el desarrollo del machine learning.
+
+#### 4.1 **Gráficos con matplotlib en PySpark**
+Dado que el coste de crear los gráficos después de procesar los datos es casi despreciable podemos analizar el rendimiento de este proceso unicamente analizando el rendimiento de procesar nuestra gran cantidad de datos.
+El rendimiento en el data-processing para la creacion de los gráficos es equivalente a los cores que se le adjunte al proceso, por tanto la escabilidad es realmente alta.Éstos gráficos lo hemos creado localmente en nuestros dispositivos usando todos los cores disponibles en éstos, pero hemos hecho pruebas en Clusters de Amazon paralelizando el proceso haciendo que el tiempo de espera hasta adquirir el resultado se acorte notablemente.
+
+#### 4.2 **Desarrollo del Machine Learning**
+
