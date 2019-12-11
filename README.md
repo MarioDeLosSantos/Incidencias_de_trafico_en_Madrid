@@ -78,6 +78,13 @@ Conjunto de software total creado:
 Todo el proceso, tanto la creación del software como la ejecucción de scripts, lo hemos realizado en ubuntu de manera local en nuestros ordenadores personales.
 Para la edición de los scripts usamos *Sublime Text*. Su ejecución la hemos realizado mediante el terminal de Ubuntu *Bash* con el soporte de *Pyspark*. Para su correcto funcionamiento el archivo del dataset (MadridAccidents.csv) se debería situar en el mismo directorio que el script de analisis que se desee ejecutar. Para ejecutar el script unicamente habra que poner "spark-submit (nombre del script)".Tras la ejecución se obtendrá por output en el terminal un resumen del analisis realizado y una imagen .png con el gráfico correspondiente que se guardará en el mismo directorio desde donde se ejecuto el script.
 
+En cuanto al machine learning se ha de ejecutar el script "MachineLearning.py" seguido de 4 argumentos que seran:
+- Distrito 
+- Dia de la semana 
+- tipo de vehiculo
+- tipo de persona afectada
+Cualquiera de los datos introducidos tienen que existir dentro del dataset previamente procesado.
+
 ### 4. **Rendimiento**
 Dentro de este apartado analizaremos el rendimiento de las dos caras de nuestro proyecto, tanto el data-processing con pyspark como el desarrollo del machine learning.
 
@@ -121,4 +128,11 @@ Aquí vemos unos cuantos ejemplos del uso de este script el cual imprime la prob
 ![Ejemplo Ejecucion](/master/images/EjemploEjecucion.png)
 
 Es importante hacer saber que el dia donde se producen mas accidentes es el miercoles y el que menos el domingo, el tipo de coche con el que se producen mas accidentes es el turismo, el tipo de persona mas implicada es el condcutor y uno de los que menos es el peaton, y unos de los distritos donde se producen mas accidentes es en Salamanca. Siguiendo este esquema vemos que las probabilidades que nos imprime el programa concuerdan perfectamente.
+
+### 6. **Conclusión**
+Dado que nuestro proyecto se dividía en dos facetas siendo una de ellas informar a las competencias locales con graficas que reflejasen los accidentes según un cierto criterio, y la otra crear un programa que hiciese predicciones de cual es la probabilidad de tener un accidente dado un nuevo recorrido con el uso de estrategias de machine learning, podemos decir que hemos conseguido ampliamente el objetivo ya que disponemos de 13 graficas informativas y un programa que crear predicciones muy precisas.
+Cabe destacar que el uso de técnicas de Big Data son imprescindibles para las dos facetas de nuestro proyecto. La primera por el tratamiento de datos tan masivos y la segunda por el numero de operaciones matematicas que hay hacer.
+
+Ha sido un gran proyecto para aprender y mejorar herramientas como PySpark,herramientas de machine learning, manejo de Clusters en AWS perfeccionamiento del uso del lenguaje de Python.
+En un futuro podríamos añadir mas tipos de gráficas y usar aquellas que sean mas afines a los datos obtenidos y por otra parte podríamos hacer que el machine learning funcionara con cualquier tipo de columna del dataset escogido.
 
