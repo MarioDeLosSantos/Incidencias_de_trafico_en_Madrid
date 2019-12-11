@@ -118,5 +118,5 @@ El resultado de esta operación sera la probabilidad de tener un accidente con l
 
 Aquí vemos unos cuantos ejemplos del uso de este script el cual imprime la probabilidad de tener un accidente relativa a la media de las probabilidades de tener un accidente con las 4 columnas escogidas anteriormente como características.
 
-![Ejemplo Ejecucion](/master/images/EjemploEjecucion.jpg)
+![Ejemplo Ejecucion](/master/images/EjemploEjecucion.png)
 
