@@ -17,13 +17,13 @@
 
 
 ### 1. **El proyecto**
-### 1.1 Descripción del problema
+#### 1.1 Descripción del problema
 El objetivo de este proyecto es tratar de disminuir el número de accidentes en cualquier área metropolitana mediante un estudio de incidencias en el tráfico. En concreto hemos llevado a cabo el estudio en la ciudad de Madrid analizando registros de accidentes de tráfico desde 2010.
 
-### 1.2 Necesidad de Big Data
+#### 1.2 Necesidad de Big Data
 La cantidad de datos y el número de operaciones necesarias a fin de obtener estadísticas reseñables puede llegar a ser masiva, por lo que se necesita una gran potencia de cómputo. Por otra parte, el estudio puede llegar a realizarse en tiempo real, por lo que también conlleva la necesidad implícita de uso de técnicas Big Data. No obstante, con el dataset usado en este prototipo no se ha requerido una gran potencia de cómputo ni la necesidad de una paralelización reseñable.
 
-### 1.3 Solución
+#### 1.3 Solución
 Para buscar solución al problema planteado hemos usado principalmente dos métodos:
 
 - Estudio de los registros:
@@ -86,4 +86,5 @@ Dado que el coste de crear los gráficos después de procesar los datos es casi 
 El rendimiento en el data-processing para la creacion de los gráficos es equivalente a los cores que se le adjunte al proceso, por tanto la escabilidad es realmente alta.Éstos gráficos lo hemos creado localmente en nuestros dispositivos usando todos los cores disponibles en éstos, pero hemos hecho pruebas en Clusters de Amazon paralelizando el proceso haciendo que el tiempo de espera hasta adquirir el resultado se acorte notablemente.
 
 #### 4.2 **Desarrollo del Machine Learning**
+El desarrollo del Machine Learning ha sido principalmente implementado localmente por un motivo en particular y es que el único cuello de botella aparece cuando se modifica los datos fuente a procesar, lo que hace que cualquier ordenador de propósito general sea suficiente para el proceso.Por tanto la escalabilidad en unicamente necesaria cuando se cambie los datos a procesar , en caso contrario no es necesario. (Ver el porque en el apartado (Mas información en **5.2 Implementación avanzada**)
 
