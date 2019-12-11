@@ -81,9 +81,10 @@ Para la edición de los scripts usamos *Sublime Text*. Su ejecución la hemos re
 En cuanto al machine learning se ha de ejecutar el script "MachineLearning.py" seguido de 4 argumentos que seran:
 - Distrito 
 - Dia de la semana 
-- tipo de vehiculo
-- tipo de persona afectada
-Cualquiera de los datos introducidos tienen que existir dentro del dataset previamente procesado.
+- Tipo de vehiculo
+- Tipo de persona afectada
+
+Cualquiera de los datos introducidos tienen que existir dentro del dataset previamente procesado. (Mas información en **5.2 Implementacion del Machine Learning**)
 
 ### 4. **Rendimiento**
 Dentro de este apartado analizaremos el rendimiento de las dos caras de nuestro proyecto, tanto el data-processing con pyspark como el desarrollo del machine learning.
