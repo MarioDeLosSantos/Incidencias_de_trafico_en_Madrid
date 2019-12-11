@@ -100,6 +100,18 @@ Las formas de asignar el tamaño a cada etiqueta viene dado de una forma similar
 #### 5.2 **Implementación del Machine Learning**
 La idea de la parte del uso de Machine Learning en el proyecto es la predicción de la probabilidad de tener un accidente dado un nuevo caso que no se encuentre en nuestro dataset.El dataset consta con muchas columnas informativas pero hemos decidido centrarnos en aquellas que creemos que son las mas relevantes que son las siguientes:
 - DISTRITO->Distrito de Madrid al que queremos dirigirnos.
-- DIA SEMANA->Dia en el que procederemos al viaje
-- Tipo Vehiculo->Tipo de vehículo que usaremos en el viaje
-- TIPO PERSONA->Tipo de persona implicada en el accidente,puede ser (Conductor,Peaton,Testigo o Viajero)
+- DIA SEMANA->Dia en el que procederemos al viaje.
+- Tipo Vehiculo->Tipo de vehículo que usaremos en el viaje.
+- TIPO PERSONA->Tipo de persona implicada en el accidente,puede ser (Conductor,Peaton,Testigo o Viajero).
+Debido a que nuestro objetivo es predecir una nueva probabilidad (Y de la funcion) para un nuevo caso (X de la funcion), optaremos por usar regresión linea no regularizada.
+Primero implementaremos tanto la función de coste como la función del gradiente.Debido al tamaño de nuestros datos no podremos usar funciones externas para obtener el theta óptimo al instante, por lo que tendremos que implementarnos el descenso de gradiente a mano.
+Este proceso puede llegar a ser muy costoso tanto en tiempo como en potencia de computo (dependiendo la precision que queramos obtener) .En este caso en concreto estuvimos aplicando el descenso de gradiente durante aproximadamente 95 minutos en un ordenador local,por lo que el uso de la paralelizacion en esta parte del proceso es crucial. 
+
+Para nuestro dataset en concreto y con las columnas elegidas anteriormente, este es el theta óptimo:
+- ([ 8.22286797e-07 ,-4.72866099e-08 ,-4.46854796e-08 , 2.04102162e-07 ,-5.48385083e-08])
+
+Una vez calculado el theta óptimo, calcular nuevas probabilidades es un proceso trivial y practicamente inmediato que podemos obtener de la siguiente maneras con la ayuda de los arrays de numpy:
+
+- np.dot(X,ThetaOptimo.T) , siendo X los 4 nuevos datos que queramos someter a la regresión linea.
+El resultado de esta operación sera la probabilidad de tener un accidente con las caracteristicas expresadas en la nueva X
+
