@@ -8,8 +8,8 @@
 2. **Modelo de datos**
 3. **Descripción técnica**
 4. **Rendimiento**
-   -Gráficos con matplotlib en PySpark
-   -Desarrollo del Machine Learning
+   - Gráficos con matplotlib en PySpark
+   - Desarrollo del Machine Learning
 5. **Implementación avanzada**
    - Implementacion de los gráficos con Matplotlib
    - Implementacion de Machine learning
