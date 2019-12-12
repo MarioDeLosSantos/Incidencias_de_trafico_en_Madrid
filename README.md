@@ -111,7 +111,7 @@ En cuanto al *machine learning* se ha de ejecutar el script "MachineLearning.py"
 
 En caso de no tener instalado Numpy, se tendrá que instalar para poder hacer uso de las matrices que resuelven el problema.
 
- $ sudo pip3 install numpy
+    $ sudo pip3 install numpy
 
 Cualquiera de los datos introducidos tienen que existir dentro del dataset previamente procesado. (Más información en **5.2 Implementacion del Machine Learning**)
 
