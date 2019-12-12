@@ -83,7 +83,7 @@ Por ejemplo, un tipo de ejecución sería:
 
     $ spark-submit tipoDeClima.py
     
-En caso de que no tengamos instalado Matplotlib, deberemos instalarlo con los siguiente comando para poder generar las gráficas tras el procesado
+En caso de que no tengamos instalado Matplotlib, deberemos instalarlo con los siguiente comandos para poder generar las gráficas tras el procesado:
 
     $ sudo pip3 install matplotlib
    
@@ -108,6 +108,10 @@ En cuanto al *machine learning* se ha de ejecutar el script "MachineLearning.py"
 - Día de la semana. 
 - Tipo de vehiculo.
 - Tipo de persona afectada.
+
+En caso de no tener instalado Numpy, se tendrá que instalar para poder hacer uso de las matrices que resuelven el problema.
+
+ $sudo pip3 install numpy
 
 Cualquiera de los datos introducidos tienen que existir dentro del dataset previamente procesado. (Más información en **5.2 Implementacion del Machine Learning**)
 
