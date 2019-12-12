@@ -82,6 +82,12 @@ Para la edición de los scripts usamos *Sublime Text*. Su ejecución la hemos re
 Por ejemplo, un tipo de ejecución sería:
 
     $ spark-submit tipoDeClima.py
+    
+En caso de que no tengamos instalado Matplotlib, deberemos instalarlo con los siguiente comando para poder generar las gráficas tras el procesado
+
+    $ sudo pip3 install matplotlib
+   
+    $ export PYSPARK_PYTHON=/usr/bin/python3
 
 Los 12 archivos que hemos creado sirven para reflejar accidentes según:
 - Año.
